@@ -9,11 +9,6 @@ namespace APIDeviceEndpoint.Controllers
     [Route("calculation")]
     public class CalculationController : Controller
     {
-        private readonly IConfiguration _configuration;
-        public CalculationController(IConfiguration configuration)
-        {
-            _configuration = configuration;
-        }
 
         [HttpGet("{deviceId}/moyenne")]
         public JsonResult GetMoyenne(string deviceId)
